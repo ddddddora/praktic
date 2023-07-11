@@ -11,7 +11,7 @@ void hanoi_towers(int count, int from, int to, int buff_peg)
         hanoi_towers(count-1, from, buff_peg, to); 
 
  
-        cout << "c " << from << " ñòîëáèêà" << " -> " << " íà " <<  to << endl;
+        cout << "c " << from << " ÑÑ‚Ð¾Ð»Ð±Ð¸ÐºÐ°" << " -> " << " Ð½Ð° " <<  to << endl;
  
         hanoi_towers(count-1, buff_peg, to, from);
     }
@@ -21,16 +21,16 @@ int main()
 {
         setlocale(LC_ALL,"rus");
     int first_peg, end_peg, buffer_peg, plate_count; 
-    cout << "Íîìåð ïåðâîãî ñòîëáèêà:" << endl;
+    cout << "ÐÐ¾Ð¼ÐµÑ€ Ð¿ÐµÑ€Ð²Ð¾Ð³Ð¾ ÑÑ‚Ð¾Ð»Ð±Ð¸ÐºÐ°:" << endl;
     cin  >> first_peg;
-    cout << "Íîìåð êîíå÷íîãî ñòîëáèêà:" << endl;
+    cout << "ÐÐ¾Ð¼ÐµÑ€ ÐºÐ¾Ð½ÐµÑ‡Ð½Ð¾Ð³Ð¾ ÑÑ‚Ð¾Ð»Ð±Ð¸ÐºÐ°:" << endl;
     cin  >> end_peg;
-    cout << "Íîìåð ïðîìåæóòî÷íîãî ñòîëáèêà:" << endl;
+    cout << "ÐÐ¾Ð¼ÐµÑ€ Ð¿Ñ€Ð¾Ð¼ÐµÐ¶ÑƒÑ‚Ð¾Ñ‡Ð½Ð¾Ð³Ð¾ ÑÑ‚Ð¾Ð»Ð±Ð¸ÐºÐ°:" << endl;
     cin  >> buffer_peg;
-    cout << "Êîëè÷åñòâî äèñêîâ:" << endl;
+    cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð´Ð¸ÑÐºÐ¾Ð²:" << endl;
     cin  >> plate_count;
  
-    
+    hanoi_towers(plate_count, first_peg, end_peg, buffer_peg);
 	
 	system("pause");
 	return 0;
