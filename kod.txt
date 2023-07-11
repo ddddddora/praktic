@@ -1,0 +1,18 @@
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+ 
+void hanoi_towers(int count, int from, int to, int buff_peg)
+{                               
+    if (count != 0)
+    {
+        hanoi_towers(count-1, from, buff_peg, to); 
+
+ 
+        cout << "c " << from << " столбика" << " -> " << " на " <<  to << endl;
+ 
+        hanoi_towers(count-1, buff_peg, to, from);
+    }
+}
