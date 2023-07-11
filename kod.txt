@@ -16,3 +16,22 @@ void hanoi_towers(int count, int from, int to, int buff_peg)
         hanoi_towers(count-1, buff_peg, to, from);
     }
 }
+
+int main()
+{
+        setlocale(LC_ALL,"rus");
+    int first_peg, end_peg, buffer_peg, plate_count; 
+    cout << "Номер первого столбика:" << endl;
+    cin  >> first_peg;
+    cout << "Номер конечного столбика:" << endl;
+    cin  >> end_peg;
+    cout << "Номер промежуточного столбика:" << endl;
+    cin  >> buffer_peg;
+    cout << "Количество дисков:" << endl;
+    cin  >> plate_count;
+ 
+    
+	
+	system("pause");
+	return 0;
+}
